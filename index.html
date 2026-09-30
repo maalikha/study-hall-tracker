@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<title>Study Hall Proof</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<h1>📍 Study Hall Proof</h1>
+<div class="tabs" id="tabs">
+<button data-v="add" class="on">➕ Add</button>
+<button data-v="month">📅 Month</button>
+<button data-v="year">🗓️ Year</button>
+</div>
+
+<section id="v-add">
+<div class="box">
+<div class="seg" id="types">
+<button data-t="study" class="on">📚 Study Hall</button>
+<button data-t="club">🛠️ Club Work</button>
+<button data-t="absent">🚫 Absent</button>
+</div>
+<div id="photoPart">
+<label class="pick" for="file" id="pick"><span>📷 Tap to add photo</span></label>
+<input type="file" id="file" accept="image/*" hidden>
+<label for="ptime">🕒 Time photo was taken</label>
+<input type="datetime-local" id="ptime">
+<div class="sub" id="autoNote"></div>
+</div>
+<div id="absentPart" hidden>
+<label for="adate">📆 Date absent</label>
+<input type="date" id="adate">
+<label>Reason status</label>
+<div class="seg2" id="inf">
+<button data-v="informed" class="on">✅ Informed</button>
+<button data-v="not informed" class="no">❌ Not informed</button>
+</div>
+</div>
+<div class="sub">⏱️ Submitted time is added automatically.</div>
+<button class="go" id="save">Submit</button>
+</div>
+</section>
+
+<section id="v-month" hidden>
+<div class="nav"><button id="pm">‹</button><b id="mt"></b><button id="nm">›</button></div>
+<div class="stats" id="mstats"></div>
+<div class="grid" id="mgrid"></div>
+<div class="legend"><span>📚 Study hall</span><span>🛠️ Club work</span><span>✅ Absent informed</span><span>❌ Not informed</span></div>
+<div id="dayDetail"></div>
+</section>
+
+<section id="v-year" hidden>
+<div class="nav"><button id="py">‹</button><b id="yt"></b><button id="ny">›</button></div>
+<div class="stats" id="ystats"></div>
+<div class="years" id="ygrid"></div>
+<div class="legend"><span style="color:var(--g)">■ Study hall</span><span style="color:var(--b)">■ Club work</span><span style="color:var(--a)">■ Informed</span><span style="color:var(--r)">■ Not informed</span></div>
+</section>
+
+<footer>
+<div class="bk"><button id="bk">⬇️ Backup</button><label for="rs">⬆️ Restore</label><input type="file" id="rs" accept=".json" hidden></div>
+Created by <b>Maalikha</b> 💜</footer>
+</main>
+<div id="big"><img alt=""></div>
+
+<script src="app.js"></script>
+</body>
+</html>
